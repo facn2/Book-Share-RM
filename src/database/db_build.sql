@@ -2,17 +2,17 @@ BEGIN;
 
 DROP TABLE IF EXISTS books, users, reservations, ratings cascade;
 
+CREATE TABLE users(
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
+  surname TEXT NOT NULL
+);
+
 CREATE TABLE books(
   id SERIAL PRIMARY KEY,
   book_name TEXT NOT NULL,
   author TEXT NOT NULL,
   user_id INTEGER REFERENCES users(id)
-);
-
-CREATE TABLE users(
-  id SERIAL PRIMARY KEY,
-  name TEXT NOT NULL,
-  surname TEXT NOT NULL
 );
 
 CREATE TABLE ratings(
