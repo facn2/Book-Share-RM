@@ -31,13 +31,15 @@ We want to create a web application which displays books for people in Founders 
 * I can rate the book after I've read it
 * Books can simultaneously be reserved by multiple users but for different dates
 
+## Schems:
+
 ## Wireframe:
 
-![altinline](https://user-images.githubusercontent.com/25408167/28833762-ff59232c-76e8-11e7-978c-07936ea571e0.png)
+![altinline](https://user-images.githubusercontent.com/25408167/29070025-00b04ab8-7c46-11e7-9dd1-3479cb314980.png)
 
 ## Architecture:
 
-![altinline](https://user-images.githubusercontent.com/25408167/28860132-d9a5a080-7763-11e7-9ae3-5b85b022c6df.JPG)
+![altinline]()
 
 ## Code Guidelines:
 * CamelCase for variable names
