@@ -20,5 +20,9 @@
   "homepage": "https://github.com/facn2/Book-Share-RM#readme",
   "devDependencies": {
     "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "env2": "^2.2.0",
+    "pg": "^7.1.0"
   }
 }
