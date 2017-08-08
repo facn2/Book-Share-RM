@@ -1,12 +1,15 @@
 const {handleHomeRoute, handlePublic} = require('./handlers');
+const getData = require('./queries/getData');
+const pg = require('pg');
+const http = require('http');
 
 const router = (request, response) => {
-	const endpoint = req.url.split('/')[1];
+	const endpoint = request.url.split('/')[1];
 
 	if (endpoint === '') {
-		handleHomeRoute(res);
+		handleHomeRoute(response);
 	} else if (endpoint.indexOf('public') === 0) {
-		handlePublic(res, req);
+		handlePublic(response, request);
 	} else if (endpoint === 'books') { 
 		getData((err, res) => {
 			if (err) {
@@ -21,8 +24,8 @@ const router = (request, response) => {
 		})
 	}
 	 else {
-		res.writeHead(404, 'Content-Type: text/html')
-		res.end('<h1>404 file not found</h1>');
+		response.writeHead(404, 'Content-Type: text/html');
+		response.end('<h1>404 file not found</h1>');
 	}
 };
 
