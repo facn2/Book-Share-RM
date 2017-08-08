@@ -50,7 +50,7 @@ We want to create a web application which displays books for people in Founders 
 | --- |:---------:|:------:| -------: |
 | 1 | 1 | 1 | 15 Aug 2017|
 
-**rating**
+**ratings**
 
 | id  | book_id | rating |
 | --- |:-------:|:------:|
