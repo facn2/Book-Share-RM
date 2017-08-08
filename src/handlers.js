@@ -1,5 +1,7 @@
 const fs = require('fs');
 const path = require('path');
+const pg = require('pg');
+const http = require('http');
 
 const handleHomeRoute = (res) => {
     const filePath = path.join(__dirname, '..', 'public', 'index.html')
