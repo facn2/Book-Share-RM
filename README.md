@@ -31,7 +31,31 @@ We want to create a web application which displays books for people in Founders 
 * I can rate the book after I've read it
 * Books can simultaneously be reserved by multiple users but for different dates
 
-## Schems:
+## Schemas:
+**books**
+
+| id  | book_name    | author | users_id |
+| --- | ------------ | ------ | -------- |
+| 1   | Harry Potter | J.K Rowling | 1|
+
+**users**
+
+| id  |  name | surname |
+| --- |:-----:|:-------:|
+| 1 | Katia | Ashkar |
+
+**reservations**
+
+| id  | book_id | users_id | due_date |
+| --- |:---------:|:------:| -------: |
+| 1 | 1 | 1 | 15 Aug 2017|
+
+**rating**
+
+| id  | book_id | rating |
+| --- |:-------:|:------:|
+| 1 | 1 | 5 |
+
 
 ## Wireframe:
 
@@ -48,7 +72,11 @@ We want to create a web application which displays books for people in Founders 
 * Use of QuerySelector to grab elements from html to js
 
 ## Team Checklist:
-* Construct basic app architecture
+* Wireframe & Architecture
+* Create schemas
+* Research sql injections
+* Create skeleton files
+* Create database
 * Create back-end server
 * Create front-end client
 * Establish Heroku
