@@ -1,0 +1,24 @@
+{
+  "name": "book-share-rm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "istanbul cover tape ./tests/test-server.js | tap-spec",
+    "start": "node ./src/server.js",
+    "devStart": "nodemon ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/facn2/Book-Share-RM.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/facn2/Book-Share-RM/issues"
+  },
+  "homepage": "https://github.com/facn2/Book-Share-RM#readme",
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
