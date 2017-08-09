@@ -33,7 +33,9 @@ function renderBookImage(err, data) {
   } else {
     var books = JSON.parse(data);
     books.forEach(function(book){
-      var bookContainer = document.querySelector('#book-container'); // connect to html
+      var bookContainer = document.createElement('div');
+      bookContainer.setAttribute('class', 'book_container')
+      var libraryContainer = document.querySelector('#library-container'); // connect to html
       var bookImageUrl = book.cover_url; //get url from book object
       // var bookId = book.id;
       var bookImg = document.createElement('img');
@@ -41,12 +43,29 @@ function renderBookImage(err, data) {
       // bookImg.setAttribute('id', 'bookId' + bookId);
       bookImg.src = bookImageUrl;
       bookContainer.appendChild(bookImg);
-      bookImg.addEventListener('click', function(){
+      var bookModal = document.createElement('div');
+      bookModal.setAttribute('class', 'book_modal');
+      bookContainer.appendChild(bookModal);
+      libraryContainer.appendChild(bookContainer)
+      console.log(bookImg);
+      bookImg.classList.add('book_cover_hide');
+      bookModal.classList.add('book_modal_hide');
+      var bookTitleData = book.book_name;
+      var bookAuthorData = book.author;
+      var bookTitleElement = document.createElement('p');
+      var bookAuthorElement = document.createElement('p');
+      bookTitleElement.innerText = 'Title: ' + bookTitleData;
+      bookAuthorElement.innerText = 'Author: ' + bookAuthorData;
+      bookModal.appendChild(bookTitleElement);
+      bookModal.appendChild(bookAuthorElement);
+      bookContainer.addEventListener('click', function(){
+        // while(bookContainer.firstChild){
+        //   bookContainer.removeChild(bookContainer.firstChild)
+        // }
+        bookImg.classList.toggle('book_cover_hide');
+        bookModal.classList.toggle('book_modal_hide');
         // create a modal window
-        var bookTitle = book.book_name;
-        var bookAuthor = book.author;
-        console.log(bookTitle);
-      })
+        })
     })
   }
 }
