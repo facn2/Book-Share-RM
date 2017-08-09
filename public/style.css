@@ -1,10 +1,50 @@
+
+html{
+  font-family: 'Courgette', cursive;
+}
+
+body {
+  background-color: goldenrod;
+  font-weight: bold;
+}
+
+.top {
+  height: 6em;
+  background-color: #ff9999;
+
+}
+
+.top-center {
+  color: white;
+  width: 20em;
+  height: 25em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.logo {
+  margin-top: 1em;
+  font-size: 2em;
+}
+
 .book_container{
-  width: 200px;
-  height: 400px;
+  width: 12.5em;
+  height: 25em;
   /*padding: 40px;*/
   position: relative;
   margin: 40px;
 }
+
+.library-container{
+  float: left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 
 .book_cover {
   width: 100%;
@@ -27,4 +67,64 @@
   top: 0px;
   left: 0px;
   /*visibility: ;*/
+}
+
+form {
+	max-width:25em;
+	margin: 1em auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+	font-family: 'Courgette', cursive;
+	width: 100%;
+	/*padding: 0.2em;*/
+  font-size: 1rem;
+	/*outline: 0;*/
+  text-align: center;
+  border: 0.15em solid #F7F7F7;
+  border-radius: 3.5em;
+	box-shadow:inset 0 0 2em rgba(0, 0, 0, 0.2);
+}
+
+/*media*/
+
+@media (max-width: 400px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+    .top{
+    height: 6em;
+    background-color: #ff9999;
+    }
+
+    .top-center {
+    color: white;
+    width: 10em;
+    height: 15em;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    }
+
+    .logo {
+    margin-top: 1em;
+    font-size: 2em;
+    }
+
+    form {
+	  max-width:15em;
+	  margin: 1em auto;
+    }
+
+    .button {
+      font-family: 'Courgette', cursive;
+      width: 60%;
+    }
 }
