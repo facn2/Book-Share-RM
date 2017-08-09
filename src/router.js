@@ -15,7 +15,7 @@ const router = (request, response) => {
 			if (err) {
 				response.writeHead(500, 'Content-Type:text/html');
 				response.end('<h1>Sorry, there was a problem getting the users</h1>');
-				console.log(error);
+				console.log(err);
 			} else {
 				const data = JSON.stringify(res);
 				response.writeHead(200, 'Content-Type:application/json');
