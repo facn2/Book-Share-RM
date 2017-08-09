@@ -12,13 +12,13 @@ CREATE TABLE books(
   id SERIAL PRIMARY KEY,
   book_name TEXT NOT NULL,
   author TEXT NOT NULL,
-  user_id INTEGER REFERENCES users(id),
+  user_id INTEGER,
   cover_url TEXT NOT NUll
 );
 
 CREATE TABLE ratings(
   id SERIAL PRIMARY KEY,
-  book_id INTEGER REFERENCES books(id),
+  book_id INTEGER,
   ratings INTEGER
 );
 

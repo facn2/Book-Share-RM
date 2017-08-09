@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Website Title</title>
-    <link href="./public/reset.css" rel="stylesheet" type="text/css">
-    <link href="./public/style.css" rel="stylesheet" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Website Title</title>
+	<link href="./public/reset.css" rel="stylesheet" type="text/css">
+	<link href="./public/style.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
-    <h2>Founders & Coders Book Share</h2>
+	<h2>Founders & Coders Book Share</h2>
 
-		<section>
-			<!-- for the form  -->
-		</section>
+	<form class="form" action="/add-new-book" method="post">
+		<input type="text" name="book_title" value="" placeholder="Book Title">
+		<input type="text" name="author" value="" placeholder="Author">
+		<input type="text" name="first_name" value="" placeholder="John">
+		<input type="text" name="last_name" value="" placeholder="Doe">
+		<input type="text" name="img_url" value="" placeholder="Image URL">
 
-		<section>
-			<div id="library-container">
+		<button type="submit" name="button">+ Add New Book</button>
+	</form>
 
-			</div>
-		</section>
-<script src="./public/index.js"> </script>
+	<section>
+		<div id="library-container">
+		</div>
+	</section>
+	<script src="./public/index.js">
+	</script>
 </body>
+
 </html>
