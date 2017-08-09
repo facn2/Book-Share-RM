@@ -1,26 +1,20 @@
 const dbConnection = require ('../database/db_connection');
 
 const addNewBook = (bookTitle, author, firstName, lastName, bookImgURL, callback) => {
-	
-	const userInsertQuery = 'INSERT INTO users(name, surname) VALUES ($1, $2);';
+
+	const userInsertQuery = 'INSERT INTO users(name, surname) VALUES ($1, $2) RETURNING id;';
 	const userDetailsArray = [firstName, lastName];
-	const bookInsertQuery = 'INSERT INTO books(book_name, author, cover_url) VALUES ($1, $2, $3);';
-	const bookDetailsArray = [bookTitle, author, bookImgURL];
+	const bookInsertQuery = 'INSERT INTO books(book_name, author, users_id, cover_url) VALUES ($1, $2, $3, $4);';
 
 	dbConnection.query(userInsertQuery, userDetailsArray, (err, res) => {
 		if (err) {
 			callback(err)
 		}
-		console.log(res);
+		const user_id = res.rows[0].id;
+		const bookDetailsArray = [bookTitle, author, user_id, bookImgURL];
+		dbConnection.query(bookInsertQuery, bookDetailsArray, (err) => {
 			callback(null)
-	});
-
-	dbConnection.query(bookInsertQuery, bookDetailsArray, (err, res) => {
-		if (err) {
-			callback(err)
-		}
-		console.log(res);
-			callback(null)
+		})
 	});
 }
 
