@@ -31,17 +31,24 @@ function renderBookImage(err, data) {
       bookModal.setAttribute('class', 'book_modal');
       bookContainer.appendChild(bookModal);
       libraryContainer.appendChild(bookContainer)
-      console.log(bookImg);
       bookImg.classList.add('book_cover_hide');
       bookModal.classList.add('book_modal_hide');
       var bookTitleData = book.book_name;
       var bookAuthorData = book.author;
+      var bookUserName = book.name;
+      var bookUserSurname = book.surname;
       var bookTitleElement = document.createElement('p');
       var bookAuthorElement = document.createElement('p');
+      var bookUserNameElement = document.createElement('p');
+      var bookUserSurnameElement = document.createElement('p');
       bookTitleElement.innerText = 'Title: ' + bookTitleData;
       bookAuthorElement.innerText = 'Author: ' + bookAuthorData;
+      bookUserNameElement.innerText = 'Name: ' + bookUserName;
+      bookUserSurnameElement.innerText = 'Surname: ' + bookUserSurname;
       bookModal.appendChild(bookTitleElement);
       bookModal.appendChild(bookAuthorElement);
+      bookModal.appendChild(bookUserNameElement);
+      bookModal.appendChild(bookUserSurnameElement);
       bookContainer.addEventListener('click', function() {
         bookImg.classList.toggle('book_cover_hide');
         bookModal.classList.toggle('book_modal_hide');

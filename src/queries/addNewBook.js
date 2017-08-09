@@ -4,7 +4,7 @@ const addNewBook = (bookTitle, author, firstName, lastName, bookImgURL, callback
 
 	const userInsertQuery = 'INSERT INTO users(name, surname) VALUES ($1, $2) RETURNING id;';
 	const userDetailsArray = [firstName, lastName];
-	const bookInsertQuery = 'INSERT INTO books(book_name, author, users_id, cover_url) VALUES ($1, $2, $3, $4);';
+	const bookInsertQuery = 'INSERT INTO books(book_name, author, user_id, cover_url) VALUES ($1, $2, $3, $4);';
 
 	dbConnection.query(userInsertQuery, userDetailsArray, (err, res) => {
 		if (err) {
