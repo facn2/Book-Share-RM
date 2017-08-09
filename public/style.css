@@ -78,6 +78,7 @@ form {
 }
 
 input {
+  z-index: 10;
 	font-family: 'Courgette', cursive;
 	width: 100%;
 	/*padding: 0.2em;*/
