@@ -4,13 +4,13 @@ const pg = require('pg');
 const http = require('http');
 
 const router = (request, response) => {
-	const endpoint = request.url.split('/')[1];
+	const endpoint = request.url;
 
-	if (endpoint === '') {
+	if (endpoint === '/') {
 		handleHomeRoute(response);
-	} else if (endpoint.indexOf('public') === 0) {
+	} else if (endpoint.indexOf('/public') === 0) {
 		handlePublic(response, request);
-	} else if (endpoint === 'books') { 
+	} else if (endpoint === '/books') { 
 		getData((err, res) => {
 			if (err) {
 				response.writeHead(500, 'Content-Type:text/html');
