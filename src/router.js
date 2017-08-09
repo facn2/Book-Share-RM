@@ -10,7 +10,7 @@ const router = (request, response) => {
 		handleHomeRoute(response);
 	} else if (endpoint.indexOf('public') === 0) {
 		handlePublic(response, request);
-	} else if (endpoint === 'books') { 
+	} else if (endpoint === 'books') {
 		getData((err, res) => {
 			if (err) {
 				response.writeHead(500, 'Content-Type:text/html');
