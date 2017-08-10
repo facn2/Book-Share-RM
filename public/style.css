@@ -108,12 +108,12 @@ button{
 * {
     margin: 0;
     padding: 0;
-  }
+}
 
 .top {
   height: 6em;
   background-color: #ff9999;
-  }
+}
 
 .top-center {
   color: white;
@@ -124,17 +124,17 @@ button{
   right: 0;
   margin: auto;
   text-align: center;
-  }
+}
 
 .logo {
   margin-top: 1em;
   font-size: 2em;
-  }
+}
 
 form {
 	max-width:15em;
 	margin: 1em auto;
-  }
+}
 
 .button {
   font-family: 'Courgette', cursive;
