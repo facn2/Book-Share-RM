@@ -96,26 +96,26 @@ input {
 }
 
 button{
-padding: 10px 15px;
-color: #fff;
-background-color: #ff9999;
-border-radius: 15px;
+ padding: 10px 15px;
+ color: #fff;
+ background-color: #ff9999;
+ border-radius: 15px;
 }
 
 /*media*/
 
 @media (max-width: 400px) {
-  * {
+* {
     margin: 0;
     padding: 0;
   }
 
-  .top {
+.top {
   height: 6em;
   background-color: #ff9999;
   }
 
-  .top-center {
+.top-center {
   color: white;
   width: 10em;
   height: 15em;
@@ -126,17 +126,17 @@ border-radius: 15px;
   text-align: center;
   }
 
-  .logo {
+.logo {
   margin-top: 1em;
   font-size: 2em;
   }
 
-  form {
+form {
 	max-width:15em;
 	margin: 1em auto;
   }
 
-  .button {
+.button {
   font-family: 'Courgette', cursive;
   width: 60%;
   }
