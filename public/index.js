@@ -25,10 +25,6 @@ function fetchData(url, cb) {
   xhr.send();
 }
 
-
-      // var bookContainer = document.createElement('div');
-      // bookContainer.setAttribute('class', 'book_container')
-
 function renderBookImage(err, data) {
   if (err) {
     console.log(err);
