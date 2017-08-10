@@ -1,6 +1,9 @@
 # Book-Share-RM
 
 ## How to use our Website:
+
+Check out our book sharing [website](https://fac-bookshare.herokuapp.com/).
+
 To check out the app, please clone this repository.
 ```
 git clone
@@ -34,9 +37,9 @@ We want to create a web application which displays books for people in Founders 
 ## Schemas:
 **books**
 
-| id  | book_name    | author | users_id |
-| --- | ------------ | ------ | -------- |
-| 1   | Harry Potter | J.K Rowling | 1|
+| id  | book_name    | author | users_id | img_url |
+| --- | ------------ | ------ | -------- | ------- |
+| 1   | Harry Potter | J.K Rowling | 1 | img.jpg |
 
 **users**
 
@@ -63,7 +66,7 @@ We want to create a web application which displays books for people in Founders 
 
 ## Architecture:
 
-![altinline]()
+![altinline](https://user-images.githubusercontent.com/25408167/29165511-8f62ac52-7dcb-11e7-962c-d0eeeead2b17.JPG)
 
 ## Code Guidelines:
 * CamelCase for variable names
