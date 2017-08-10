@@ -39,6 +39,8 @@ const router = (request, response) => {
 				if (err) {
 					console.log(err);
 					return 'Error with Adding New Book'
+					response.writeHead(404, 'Content-Type: text/html')
+					response.end('<h1>Sorry we couldn\'t add your book</h1>')
 				}
 				response.writeHead(301, {"Location" : "/"})
 				response.end()
