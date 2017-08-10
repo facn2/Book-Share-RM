@@ -35,15 +35,15 @@ function renderBookImage(err, data) {
   } else {
     var books = JSON.parse(data);
     books.forEach(function(book) {
-      
-      // Create and Set Classes for BookContainer / bookImg / bookModal 
+
+      // Create and Set Classes for BookContainer / bookImg / bookModal
       var bookContainer = createAndSetAttribute('div', 'book_container');
       var bookModal = createAndSetAttribute('div', 'book_modal book_modal_hide');
       var bookImg = createAndSetAttribute('img', 'book_cover book_cover_hide');
-      
+
       // Set img src to be equal to the cover_url
       bookImg.src = book.cover_url;
-      
+
       // Append BookImg and bookModal to BookContainer
       bookContainer.appendChild(bookImg);
       bookContainer.appendChild(bookModal);
@@ -54,15 +54,19 @@ function renderBookImage(err, data) {
       // Create and Dynamically set Inner Text of Element
       var bookTitleElement = createAndSetInnerText('p', 'Title: ' + book.book_name);
       var bookAuthorElement = createAndSetInnerText('p', 'Author: ' + book.author);
+      var bookUserNameElement = createAndSetInnerText('p', 'Name: ' + book.name);
+      var bookUserSurnameElement = createAndSetInnerText('p', 'Surname: ' + book.surname);
 
       // Append Created Elements to BookModal
       bookModal.appendChild(bookTitleElement);
       bookModal.appendChild(bookAuthorElement);
+      bookModal.appendChild(bookUserNameElement);
+      bookModal.appendChild(bookUserSurnameElement);
 
       // Toggle Classes on Click
       bookContainer.addEventListener('click', function() {
-      bookImg.classList.toggle('book_cover_hide');
-      bookModal.classList.toggle('book_modal_hide');
+        bookImg.classList.toggle('book_cover_hide');
+        bookModal.classList.toggle('book_modal_hide');
       })
     })
   }

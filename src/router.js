@@ -32,7 +32,6 @@ const router = (request, response) => {
 		})
 
 		request.on('end', () => {
-			console.log(inputData);
 			const bookTitle = querystring.parse(inputData).book_title;
 			const author = querystring.parse(inputData).author;
 			const firstName = querystring.parse(inputData).first_name;
