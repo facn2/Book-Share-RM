@@ -32,14 +32,12 @@ const router = (request, response) => {
 		})
 
 		request.on('end', () => {
-			const bookTitle = querystring.parse(inputData).book_title;
-			const author = querystring.parse(inputData).author;
-			const firstName = querystring.parse(inputData).first_name;
-			const lastName = querystring.parse(inputData).last_name;
-			const bookImgURL = querystring.parse(inputData).img_url;
+			const formInput = querystring.parse(inputData);
+			console.log(formInput);
 
-			addNewBook(bookTitle, author, firstName, lastName, bookImgURL, (err) => {
+			addNewBook(formInput, (err) => {
 				if (err) {
+					console.log(err);
 					return 'Error with Adding New Book'
 				}
 				response.writeHead(301, {"Location" : "/"})
